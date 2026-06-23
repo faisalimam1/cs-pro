@@ -4,7 +4,7 @@
 // light chips so they stay legible (and on-brand) against the dark navy.
 const LOGOS = [
   { src: "/assets/logos/ieeebs.png", alt: "IEEE Bangalore Section" },
-  { src: "/assets/logos/ieeecs.png", alt: "IEEE Computer Society — Bangalore Chapter" },
+  { src: "/assets/logos/ieeecs.png", alt: "IEEE Sensor Council" },
   {
     src: "/assets/logos/logo-IEEE-CS-80th-FINAL_Color.avif",
     alt: "IEEE Computer Society — Celebrating 80 Years",
