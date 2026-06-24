@@ -117,6 +117,30 @@ export function SectionHeading({
   );
 }
 
+/* ---------- Map pin link (visibly clickable badge next to a venue name) ---------- */
+export function MapPinLink({ href, className = "" }: { href: string; className?: string }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener"
+      aria-label="View venue on Google Maps"
+      className={`ml-2 inline-flex translate-y-[-2px] items-center gap-1.5 rounded-full border border-line-gold bg-gold/[0.08] px-3 py-1 align-middle text-[0.7rem] font-semibold uppercase tracking-[0.08em] text-gold-2 transition-all duration-300 hover:-translate-y-[1px] hover:border-gold-2 hover:bg-gold/[0.16] hover:text-gold ${className}`}
+    >
+      <svg
+        viewBox="0 0 24 24"
+        width="14"
+        height="14"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z" />
+      </svg>
+      View Map
+    </a>
+  );
+}
+
 /* ---------- Hairline gold rule ---------- */
 export function GoldRule() {
   return (

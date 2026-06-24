@@ -10,7 +10,8 @@ export const EVENT = {
 
   dateLabel: 'Sunday, 26 July 2026',
   timeLabel: '9:00 AM – 1:00 PM',
-  venue: 'Bengaluru · to be announced',
+  venue: 'Sheraton Grand Bangalore Hotel, Brigade Gateway',
+  venueMapUrl: 'https://maps.app.goo.gl/mxsjF5CwHZonqfqb7',
   city: 'Bengaluru',
   access: 'By Invitation Only',
 
@@ -29,9 +30,8 @@ export const EVENT = {
 
   organiser: 'IEEE Computer Society · Bangalore Chapter',
   association:
-    'In association with IEEE Bangalore Section & the IEEE Computer Society 80 Years Celebration',
-  afterNote:
-    'Followed by lunch & informal networking, and the IEEE Computer Society 80 Years Celebration.',
+    'In association with IEEE Bangalore Section & IEEE Sensor Council',
+  afterNote: 'Followed by lunch & networking.',
 
   forms: {
     leaders:

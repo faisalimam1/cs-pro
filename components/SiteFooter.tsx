@@ -8,7 +8,13 @@ const SOCIAL: [string, string, string][] = [
   ["Facebook", "f", EVENT.social.facebook],
 ];
 
-export default function SiteFooter() {
+export default function SiteFooter({
+  phone = EVENT.phone,
+  phoneHref = EVENT.phoneHref,
+}: {
+  phone?: string;
+  phoneHref?: string;
+}) {
   return (
     <footer className="relative z-[2] border-t border-line bg-bg-deep px-7 pb-7 pt-[72px] text-body">
       <div className="mx-auto grid w-full max-w-[1140px] grid-cols-1 items-start gap-10 md:grid-cols-[1.6fr_1fr_1fr]">
@@ -34,9 +40,9 @@ export default function SiteFooter() {
           </a>
           <a
             className="mb-2.5 block text-[0.92rem] transition-colors hover:text-gold-2"
-            href={`tel:${EVENT.phoneHref}`}
+            href={`tel:${phoneHref}`}
           >
-            {EVENT.phone}
+            {phone}
           </a>
           <a
             className="mb-2.5 block text-[0.92rem] transition-colors hover:text-gold-2"

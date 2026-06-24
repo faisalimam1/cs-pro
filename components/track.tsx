@@ -2,7 +2,7 @@ import Link from "next/link";
 import Constellation from "@/components/Constellation";
 import Reveal from "@/components/Reveal";
 import AddToCalendar from "@/components/AddToCalendar";
-import { Badge, Button, Wrap } from "@/components/ui";
+import { Badge, Button, MapPinLink, Wrap } from "@/components/ui";
 import { EVENT, type CalEvent } from "@/lib/event";
 
 /* ---------- Track hero ---------- */
@@ -10,10 +10,12 @@ export function TrackHero({
   eyebrow,
   title,
   intro,
+  timeLabel = EVENT.timeLabel,
 }: {
   eyebrow: string;
   title: string;
   intro: string;
+  timeLabel?: string;
 }) {
   return (
     <header
@@ -60,7 +62,8 @@ export function TrackHero({
 
         <Reveal delay={480}>
           <p className="mt-7 text-[0.92rem] tracking-[0.06em] text-strong">
-            {EVENT.dateLabel} &nbsp;·&nbsp; {EVENT.timeLabel} &nbsp;·&nbsp; {EVENT.venue}
+            {EVENT.dateLabel} &nbsp;·&nbsp; {timeLabel} &nbsp;·&nbsp; {EVENT.venue}
+            <MapPinLink href={EVENT.venueMapUrl} />
           </p>
         </Reveal>
 
@@ -95,10 +98,12 @@ export function RegisterSection({
   formUrl,
   ctaLabel,
   cal,
+  timeLabel = EVENT.timeLabel,
 }: {
   formUrl: string;
   ctaLabel: string;
   cal: CalEvent;
+  timeLabel?: string;
 }) {
   return (
     <section
@@ -122,14 +127,17 @@ export function RegisterSection({
           <div className="flex flex-wrap items-start justify-center gap-[clamp(20px,6vw,72px)]">
             {[
               ["Date", EVENT.dateLabel],
-              ["Time", EVENT.timeLabel],
+              ["Time", timeLabel],
               ["Venue", EVENT.venue],
             ].map(([lbl, val]) => (
               <div key={lbl} className="flex flex-col gap-2.5">
                 <span className="text-[0.66rem] uppercase tracking-[0.28em] text-gold-2">
                   {lbl}
                 </span>
-                <span className="font-serif text-[1.5rem] font-medium text-head">{val}</span>
+                <span className="font-serif text-[1.5rem] font-medium text-head">
+                  {val}
+                  {lbl === "Venue" && <MapPinLink href={EVENT.venueMapUrl} />}
+                </span>
               </div>
             ))}
           </div>
@@ -150,7 +158,7 @@ export function RegisterSection({
           </p>
         </Reveal>
         <Reveal>
-          <p className="mx-auto mt-4 max-w-[520px] text-[0.86rem] text-muted">
+          <p className="mx-auto mt-5 max-w-[520px] font-serif text-[1.3rem] font-semibold italic tracking-[0.01em] text-gold-2 [text-shadow:0_2px_24px_rgba(226,197,126,.35)]">
             {EVENT.afterNote}
           </p>
         </Reveal>

@@ -27,6 +27,8 @@ const AGENDA: [string, string][] = [
   ["10:45 AM", "Rapid Fire Leadership Exchange"],
   ["11:05 AM", "Leadership Insights Presentation"],
   ["11:20 AM", "Moderator summary & group photograph"],
+  ["11:30 AM", "Tea break & Professionals Connect"],
+  ["1:00 PM", "Lunch & networking"],
 ];
 
 const ROUND_TABLES = [
@@ -49,9 +51,9 @@ const ROUND_TABLES = [
 
 const SEATS: [string, string][] = [
   ["leader", "Industry Leaders"],
-  ["founder", "Startup Founders"],
-  ["investor", "CXOs & Decision-Makers"],
-  ["academia", "Invited Guests"],
+  ["founder", "Founders"],
+  ["investor", "CXOs"],
+  ["academia", "Decision-Makers"],
 ];
 
 export default function LeadershipRoundTable() {
@@ -60,7 +62,7 @@ export default function LeadershipRoundTable() {
       <TrackHero
         eyebrow="Session One · Leaders"
         title="Leadership Round Table"
-        intro="A closed, peer-level forum where leaders from industry, startups and academia convene for focused round-table dialogue — candid exchange over scripted panels."
+        intro="A closed, peer-level forum for the decision-makers who drive industry, academia, business and startups forward, convened for focused round-table dialogue and not scripted panels."
       />
 
       {/* Invitation statement */}
@@ -85,7 +87,7 @@ export default function LeadershipRoundTable() {
           <SectionHeading
             kicker="The Programme"
             title="The morning at a glance"
-            sub="Session 1 · 9:00 – 11:30 AM · sequence indicative"
+            sub="9:00 AM – 1:00 PM · sequence indicative"
           />
           <Agenda items={AGENDA} />
         </Wrap>
@@ -143,11 +145,11 @@ export default function LeadershipRoundTable() {
         cal={{
           title: "IEEE CS Pro 2026 — Leadership Round Table",
           desc: "An exclusive leadership round-table forum. By invitation only. Leaders. Learners. Impact.",
-          location: "Bengaluru (venue to be announced)",
+          location: "Sheraton Grand Bangalore Hotel, Brigade Gateway",
         }}
       />
 
-      <SiteFooter />
+      <SiteFooter phone="+91 98867 21293" phoneHref="+919886721293" />
     </main>
   );
 }

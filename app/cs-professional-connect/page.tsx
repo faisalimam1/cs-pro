@@ -21,11 +21,11 @@ export const metadata: Metadata = {
 };
 
 const AGENDA: [string, string][] = [
-  ["11:50 AM", "Opening Address — “Navigating a Changing World Together”"],
+  ["11:30 AM", "Opening Address — “Navigating a Changing World Together”"],
   ["12:00 PM", "Ice breakers & introductions"],
-  ["12:10 PM", "Meet & Greet networking session"],
+  ["12:20 PM", "Meet & Greet session with Industry Leaders"],
   ["12:50 PM", "Closing remarks & acknowledgements"],
-  ["1:00 PM", "Lunch & informal networking"],
+  ["1:00 PM", "Lunch & networking"],
 ];
 
 const EXPECT = [
@@ -45,11 +45,11 @@ const EXPECT = [
 
 const ROOM: [string, string][] = [
   ["hr", "HR Professionals"],
-  ["tpo", "Training & Placement Officers"],
-  ["coord", "Placement Coordinators"],
+  ["tpo", "TPOs"],
   ["academia", "Academicians"],
   ["leader", "Industry Professionals"],
-  ["innovator", "IEEE Members"],
+  ["innovator", "IEEE Excom"],
+  ["founder", "Founders"],
 ];
 
 export default function CsProfessionalConnect() {
@@ -59,6 +59,7 @@ export default function CsProfessionalConnect() {
         eyebrow="Session Two · Professionals"
         title="CS Professional Connect"
         intro="A networking forum connecting HR, placement, academia and industry with the IEEE community — meaningful conversations and lasting professional connections."
+        timeLabel="11:00 AM – 1:00 PM"
       />
 
       {/* Intro statement */}
@@ -83,7 +84,7 @@ export default function CsProfessionalConnect() {
           <SectionHeading
             kicker="The Programme"
             title="The session at a glance"
-            sub="Session 2 · 11:50 AM – 1:00 PM · sequence indicative"
+            sub="Session 2 · 11:30 AM – 1:00 PM · sequence indicative"
           />
           <Agenda items={AGENDA} />
         </Wrap>
@@ -128,10 +129,11 @@ export default function CsProfessionalConnect() {
       <RegisterSection
         formUrl={EVENT.forms.professionals}
         ctaLabel="Register as a Professional"
+        timeLabel="11:00 AM – 1:00 PM"
         cal={{
           title: "IEEE CS Pro 2026 — CS Professional Connect",
           desc: "A professional networking forum & IEEE membership drive. Leaders. Learners. Impact.",
-          location: "Bengaluru (venue to be announced)",
+          location: "Sheraton Grand Bangalore Hotel, Brigade Gateway",
         }}
       />
 
