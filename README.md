@@ -138,18 +138,6 @@ which WhatsApp, LinkedIn, and X link previews require.
 
 ---
 
-## 🖼️ Swapping in the official IEEE logos
-
-The organizer marks in `public/assets/logos/` are clean, on-brand **placeholders**. To use the
-official artwork, overwrite the files in place (keep the same filenames) — ideally SVG or
-transparent PNG, re-tinted light for the dark background:
-
-- `ieee-bangalore-section.svg` · `ieee-cs-bangalore.svg` · `ieee-80-years.svg`
-
-`ieee-master.svg` is the authentic IEEE master logo.
-
----
-
 ## 🤝 Organizer
 
 Organized by the **IEEE Computer Society · Bangalore Chapter**, in association with the
