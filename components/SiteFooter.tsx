@@ -1,23 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import { EVENT } from "@/lib/event";
 
-const SOCIAL: [string, string, string][] = [
-  ["LinkedIn", "in", EVENT.social.linkedin],
-  ["Instagram", "ig", EVENT.social.instagram],
-  ["X", "x", EVENT.social.x],
-  ["Facebook", "f", EVENT.social.facebook],
-];
-
-export default function SiteFooter({
-  phone = EVENT.phone,
-  phoneHref = EVENT.phoneHref,
-}: {
-  phone?: string;
-  phoneHref?: string;
-}) {
+export default function SiteFooter() {
   return (
     <footer className="relative z-[2] border-t border-line bg-bg-deep px-7 pb-7 pt-[72px] text-body">
-      <div className="mx-auto grid w-full max-w-[1140px] grid-cols-1 items-start gap-10 md:grid-cols-[1.6fr_1fr_1fr]">
+      <div className="mx-auto grid w-full max-w-[1140px] grid-cols-1 items-start gap-10 md:grid-cols-[1.6fr_1fr]">
         <div>
           <img
             src="/assets/logos/ieee-master.svg"
@@ -38,43 +25,6 @@ export default function SiteFooter({
           >
             {EVENT.contactEmail}
           </a>
-          <a
-            className="mb-2.5 block text-[0.92rem] transition-colors hover:text-gold-2"
-            href={`tel:${phoneHref}`}
-          >
-            {phone}
-          </a>
-          <a
-            className="mb-2.5 block text-[0.92rem] transition-colors hover:text-gold-2"
-            href={EVENT.websiteHref}
-            target="_blank"
-            rel="noopener"
-          >
-            {EVENT.website}
-          </a>
-        </div>
-
-        <div>
-          <p className="mb-4 text-[0.68rem] uppercase tracking-[0.26em] text-gold-2">
-            Follow
-          </p>
-          <div className="mb-3 flex gap-2.5">
-            {SOCIAL.map(([label, glyph, href]) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener"
-                aria-label={label}
-                className="grid h-[38px] w-[38px] place-items-center rounded-full border border-white/[0.18] text-[0.78rem] uppercase transition-all hover:-translate-y-0.5 hover:border-gold-2 hover:text-gold-2"
-              >
-                {glyph}
-              </a>
-            ))}
-          </div>
-          <p className="m-0 text-[0.85rem] tracking-[0.1em] text-muted">
-            {EVENT.instagram}
-          </p>
         </div>
       </div>
 
