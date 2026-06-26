@@ -1,26 +1,10 @@
-import Link from "next/link";
 import Constellation from "@/components/Constellation";
 import Countdown from "@/components/Countdown";
 import OrganizerLogos from "@/components/OrganizerLogos";
 import Reveal from "@/components/Reveal";
 import SiteFooter from "@/components/SiteFooter";
 import { Badge, MapPinLink } from "@/components/ui";
-import { EVENT, ROUTES } from "@/lib/event";
-
-const TRACKS = [
-  {
-    href: ROUTES.leaders,
-    tag: "Session One",
-    name: "Leadership Round Table",
-    who: "For invited CXOs, industry leaders, founders, entrepreneurs & decision-makers.",
-  },
-  {
-    href: ROUTES.professionals,
-    tag: "Session Two",
-    name: "CS Professional Connect",
-    who: "For HRs, Professionals, TPOs, academicians & IEEE members.",
-  },
-];
+import { EVENT } from "@/lib/event";
 
 export default function Home() {
   return (
@@ -88,35 +72,6 @@ export default function Home() {
               thoughtful dialogue, considered perspective, and the
               connections that shape what comes next.
             </p>
-          </Reveal>
-
-          <Reveal delay={680} className="mt-16">
-            <p className="mb-6 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-gold-2">
-              Choose your track to register
-            </p>
-            <div className="grid grid-cols-1 gap-5 text-left sm:grid-cols-2">
-              {TRACKS.map((t) => (
-                <Link
-                  key={t.href}
-                  href={t.href}
-                  className="group flex flex-col rounded-xl border border-line-gold bg-gradient-to-b from-panel-2/70 to-panel/40 p-8 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_30px_60px_-28px_rgba(0,0,0,.7)]"
-                >
-                  <span className="mb-3 text-[0.64rem] font-semibold uppercase tracking-[0.26em] text-gold-2">
-                    {t.tag}
-                  </span>
-                  <h2 className="m-0 font-serif text-[1.6rem] font-semibold leading-[1.15] text-head">
-                    {t.name}
-                  </h2>
-                  <p className="mb-0 mt-3 flex-1 text-[0.94rem] text-body/90">{t.who}</p>
-                  <span className="mt-6 inline-flex items-center gap-2 text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-gold-2">
-                    Enter
-                    <span className="transition-transform duration-300 group-hover:translate-x-1">
-                      →
-                    </span>
-                  </span>
-                </Link>
-              ))}
-            </div>
           </Reveal>
         </div>
       </section>

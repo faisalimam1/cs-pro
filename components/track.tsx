@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Constellation from "@/components/Constellation";
 import Reveal from "@/components/Reveal";
 import AddToCalendar from "@/components/AddToCalendar";
@@ -29,15 +28,6 @@ export function TrackHero({
       />
 
       <div className="relative z-[2] mx-auto w-full max-w-[900px]">
-        <Reveal>
-          <Link
-            href="/"
-            className="inline-block text-[0.7rem] font-medium uppercase tracking-[0.26em] text-muted transition-colors hover:text-gold-2"
-          >
-            ← IEEE CS Pro 2026
-          </Link>
-        </Reveal>
-
         <Reveal delay={120} className="mt-8">
           <Badge>{EVENT.access}</Badge>
         </Reveal>

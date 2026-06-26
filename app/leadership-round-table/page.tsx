@@ -149,7 +149,7 @@ export default function LeadershipRoundTable() {
         }}
       />
 
-      <SiteFooter phone="+91 98867 21293" phoneHref="+919886721293" />
+      <SiteFooter />
     </main>
   );
 }
