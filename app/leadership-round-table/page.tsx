@@ -60,7 +60,7 @@ export default function LeadershipRoundTable() {
   return (
     <main>
       <TrackHero
-        eyebrow="Session One · Leaders"
+        eyebrow="Leaders"
         title="Leadership Round Table"
         intro="A closed, peer-level forum for the decision-makers who drive industry, academia, business and startups forward, convened for focused round-table dialogue and not scripted panels."
       />
@@ -144,7 +144,7 @@ export default function LeadershipRoundTable() {
         ctaLabel="Register as a Leader"
         cal={{
           title: "IEEE CS Pro 2026 — Leadership Round Table",
-          desc: "An exclusive leadership round-table forum. By invitation only. Leaders. Learners. Impact.",
+          desc: "An exclusive leadership round-table forum. By invitation only. Meet. Connect. Collaborate.",
           location: "Sheraton Grand Bangalore Hotel, Brigade Gateway",
         }}
       />

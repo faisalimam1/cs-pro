@@ -4,7 +4,7 @@
 
 ### A premium digital invitation for an invite-only leadership & networking forum for CS professionals
 
-*Leaders. Learners. Impact.*
+*Meet. Connect. Collaborate.*
 
 <br/>
 

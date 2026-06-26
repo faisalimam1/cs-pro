@@ -3,8 +3,21 @@ import Countdown from "@/components/Countdown";
 import OrganizerLogos from "@/components/OrganizerLogos";
 import Reveal from "@/components/Reveal";
 import SiteFooter from "@/components/SiteFooter";
-import { Badge, MapPinLink } from "@/components/ui";
+import { Badge, MapPinLink, Section, SectionHeading, Wrap } from "@/components/ui";
 import { EVENT } from "@/lib/event";
+
+const SESSIONS = [
+  {
+    tag: "Leaders",
+    title: "Leadership Round Table",
+    body: "An exclusive, invitation-based forum that brings together industry leaders, founders, entrepreneurs, and academic leaders for focused discussions on emerging challenges, workforce readiness and innovation. Through moderated round table conversations, participants will exchange perspectives, share practical experiences, and develop actionable recommendations that foster long-term partnerships and create meaningful impact.",
+  },
+  {
+    tag: "Professionals",
+    title: "CS Professional Connect",
+    body: "An open, welcoming forum that brings together HR professionals, training & placement officers, academicians, and industry practitioners with the wider IEEE community for meaningful conversation on workforce readiness and responsible innovation. Through a shared opening address, guided introductions and a meet-and-greet with industry leaders, participants will build cross-sector connections, explore the benefits of IEEE membership, and form partnerships that extend well beyond the event.",
+  },
+];
 
 export default function Home() {
   return (
@@ -75,6 +88,33 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+      <Section alt>
+        <Wrap>
+          <SectionHeading
+            kicker="The Format"
+            title="Two gatherings, one morning"
+            sub="IEEE CS Pro 2026 unfolds as two connected sessions across a single morning."
+          />
+          <div className="mt-14 grid grid-cols-1 gap-[26px] md:grid-cols-2">
+            {SESSIONS.map((s, i) => (
+              <Reveal key={s.title} delay={i * 120}>
+                <article className="group h-full rounded-lg border border-line bg-gradient-to-b from-panel to-panel/50 px-8 pb-9 pt-10 transition-all duration-500 hover:-translate-y-1.5 hover:border-line-gold hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,.7)]">
+                  <p className="mb-4 text-[0.7rem] font-semibold uppercase tracking-[0.34em] text-gold-2">
+                    {s.tag}
+                  </p>
+                  <h3 className="m-0 mb-5 font-serif text-[1.85rem] font-medium leading-[1.12] text-head">
+                    {s.title}
+                  </h3>
+                  <p className="m-0 font-serif text-[1.22rem] font-normal leading-[1.62] text-body/95 text-justify hyphens-auto [text-wrap:pretty]">
+                    {s.body}
+                  </p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </Wrap>
+      </Section>
 
       <SiteFooter />
     </main>
