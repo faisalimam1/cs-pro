@@ -60,7 +60,7 @@ export default function LeadershipRoundTable() {
   return (
     <main>
       <TrackHero
-        eyebrow="Session One · Leaders"
+        eyebrow="Leaders"
         title="Leadership Round Table"
         intro="A closed, peer-level forum for the decision-makers who drive industry, academia, business and startups forward, convened for focused round-table dialogue and not scripted panels."
       />

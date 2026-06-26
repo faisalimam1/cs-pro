@@ -56,7 +56,7 @@ export default function CsProfessionalConnect() {
   return (
     <main>
       <TrackHero
-        eyebrow="Session Two · Professionals"
+        eyebrow="Professionals"
         title="CS Professional Connect"
         intro="A networking forum connecting HR, placement, academia and industry with the IEEE community — meaningful conversations and lasting professional connections."
         timeLabel="11:00 AM – 1:00 PM"

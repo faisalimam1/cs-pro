@@ -5,7 +5,7 @@
 
 export const EVENT = {
   name: 'IEEE CS Pro 2026',
-  theme: 'Leaders. Learners. Impact.',
+  theme: 'Meet. Connect. Collaborate.',
   tagline: 'An exclusive leadership & networking forum for CS professionals.',
 
   dateLabel: 'Sunday, 26 July 2026',
