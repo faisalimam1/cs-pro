@@ -1,4 +1,5 @@
 import Constellation from "@/components/Constellation";
+import Countdown from "@/components/Countdown";
 import Reveal from "@/components/Reveal";
 import AddToCalendar from "@/components/AddToCalendar";
 import { Badge, Button, MapPinLink, Wrap } from "@/components/ui";
@@ -57,7 +58,11 @@ export function TrackHero({
           </p>
         </Reveal>
 
-        <Reveal delay={560} className="mt-10">
+        <Reveal delay={560} className="mt-12">
+          <Countdown />
+        </Reveal>
+
+        <Reveal delay={640} className="mt-12">
           <Button href="#register">Register</Button>
         </Reveal>
       </div>
