@@ -132,7 +132,7 @@ export default function CsProfessionalConnect() {
         timeLabel="11:00 AM – 1:00 PM"
         cal={{
           title: "IEEE CS Pro 2026 — CS Professional Connect",
-          desc: "A professional networking forum & IEEE membership drive. Leaders. Learners. Impact.",
+          desc: "A professional networking forum & IEEE membership drive. Meet. Connect. Collaborate.",
           location: "Sheraton Grand Bangalore Hotel, Brigade Gateway",
         }}
       />

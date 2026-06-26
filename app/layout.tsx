@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     url: "/",
     title: "IEEE CS Pro 2026 — An Exclusive Invitation",
     description:
-      "Leaders. Learners. Impact. · An exclusive leadership & networking forum · 26 July 2026 · Bengaluru · By Invitation Only",
+      "Meet. Connect. Collaborate. · An exclusive leadership & networking forum · 26 July 2026 · Bengaluru · By Invitation Only",
     images: [
       {
         url: "/assets/og/og-image.png",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "IEEE CS Pro 2026 — An Exclusive Invitation",
     description:
-      "Leaders. Learners. Impact. · An exclusive leadership & networking forum · 26 July 2026 · Bengaluru",
+      "Meet. Connect. Collaborate. · An exclusive leadership & networking forum · 26 July 2026 · Bengaluru",
     images: ["/assets/og/og-image.png"],
   },
   icons: {
