@@ -22,11 +22,6 @@ export const EVENT = {
   endUTC: '20260726T073000Z',
 
   contactEmail: 'ieeecspro@gmail.com',
-  phone: '+91 96089 53402',
-  phoneHref: '+919608953402',
-  website: 'ieeecsbangalore.org',
-  websiteHref: 'https://ieeecsbangalore.org',
-  instagram: '@ieeecsbc',
 
   organiser: 'IEEE Computer Society · Bangalore Chapter',
   association:
@@ -38,13 +33,6 @@ export const EVENT = {
       'https://docs.google.com/forms/d/e/1FAIpQLSexJ1lUZZT_RarcPOsKUfdkxXlZBlsh_V__29rsmI6FnUFO_A/viewform',
     professionals:
       'https://docs.google.com/forms/d/e/1FAIpQLSd686aQcAj5rE7ZykW77mTAeotlMuyp3w0Cfn-kW6d8lr_yZw/viewform',
-  },
-
-  social: {
-    linkedin: 'https://www.linkedin.com/company/ieeecsbc',
-    instagram: 'https://www.instagram.com/ieeecsbc',
-    x: 'https://twitter.com/ieeecsbc',
-    facebook: 'https://www.facebook.com/ieeecsbc',
   },
 } as const;
 
