@@ -148,7 +148,7 @@ export function RegisterSection({
         </Reveal>
 
         <Reveal>
-          <p className="mt-8 font-serif text-[0.95rem] italic text-muted">
+          <p className="mt-8 font-serif text-[1.15rem] italic text-muted">
             Seats are by invitation. Kindly respond at your earliest convenience.
           </p>
         </Reveal>

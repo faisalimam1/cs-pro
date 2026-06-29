@@ -112,7 +112,7 @@ export function SectionHeading({
       <h2 className="m-0 font-serif text-[clamp(2rem,4.6vw,3.4rem)] font-medium leading-[1.08] text-head">
         {title}
       </h2>
-      {sub && <p className="mt-4 text-[0.98rem] text-muted">{sub}</p>}
+      {sub && <p className="mt-4 text-[1.15rem] text-muted">{sub}</p>}
     </div>
   );
 }
