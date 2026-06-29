@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: ROUTES.professionals,
     title: "CS Professional Connect · IEEE CS Pro 2026",
     description:
-      "A networking forum connecting HR, placement, academia and industry with the IEEE community. By invitation only.",
+      "A curated networking forum designed to foster meaningful conversations, cross-sector collaboration, and lasting professional connections. By invitation only.",
     images: [{ url: "/assets/og/og-image.png", width: 1200, height: 630 }],
   },
 };
@@ -30,16 +30,16 @@ const AGENDA: [string, string][] = [
 
 const EXPECT = [
   {
-    title: "Cross-sector networking",
-    line: "Open conversation among HR, TPOs, placement teams, academia and industry — built for real connections.",
+    title: "Cross-Sector Networking",
+    line: "Engage with HR leaders, Training & Placement Officers, academicians, industry professionals, and the IEEE community in curated networking conversations designed to foster meaningful relationships, knowledge exchange, and future collaborations.",
   },
   {
-    title: "IEEE Membership Drive",
-    line: "Learn the benefits of IEEE membership, with on-the-spot registration support at the desk.",
+    title: "IEEE Membership & Professional Community",
+    line: "Discover how IEEE membership supports professional growth, lifelong learning, and global networking. Dedicated support will be available for membership enquiries and on-the-spot registration.",
   },
   {
-    title: "A shared opening address",
-    line: "“Navigating a Changing World Together” — on technology, workforce readiness and responsible innovation.",
+    title: "Opening Keynote Address",
+    line: "Begin the forum with an engaging address on “Navigating a Changing World Together”, exploring the impact of emerging technologies, workforce transformation and responsible innovation.",
   },
 ];
 
@@ -58,7 +58,7 @@ export default function CsProfessionalConnect() {
       <TrackHero
         eyebrow="Professionals"
         title="CS Professional Connect"
-        intro="A networking forum connecting HR, placement, academia and industry with the IEEE community — meaningful conversations and lasting professional connections."
+        intro="A curated networking forum designed to foster meaningful conversations, cross-sector collaboration, and lasting professional connections."
         timeLabel="11:00 AM – 1:00 PM"
       />
 
@@ -67,9 +67,11 @@ export default function CsProfessionalConnect() {
         <Wrap narrow className="text-center">
           <Reveal>
             <p className="font-serif text-[clamp(1.4rem,2.6vw,1.95rem)] leading-[1.5] text-head">
-              You are warmly invited to connect — an open session designed to bring
-              professionals and the IEEE community together to learn, exchange and
-              build partnerships across industry and academia.
+              You are warmly invited to IEEE CS Professional Connect, an
+              invitation-only networking forum designed to bring together
+              professionals, industry representatives, academicians, and the IEEE
+              community to connect, exchange insights, and cultivate lasting
+              collaborations.
             </p>
           </Reveal>
           <Reveal>
@@ -84,7 +86,7 @@ export default function CsProfessionalConnect() {
           <SectionHeading
             kicker="The Programme"
             title="The session at a glance"
-            sub="Session 2 · 11:30 AM – 1:00 PM · sequence indicative"
+            sub="Session · 11:30 AM – 1:00 PM · sequence indicative"
           />
           <Agenda items={AGENDA} />
         </Wrap>
@@ -93,18 +95,18 @@ export default function CsProfessionalConnect() {
       {/* What to expect */}
       <Section>
         <Wrap>
-          <SectionHeading kicker="What to Expect" title="An afternoon of connection" />
+          <SectionHeading kicker="What to Expect" title="An Afternoon of Meaningful Connections" />
           <div className="mt-14 grid grid-cols-1 gap-[26px] md:grid-cols-3">
             {EXPECT.map((e, i) => (
               <Reveal key={e.title} delay={i * 120}>
-                <article className="group h-full rounded-lg border border-line bg-gradient-to-b from-panel to-panel/50 px-8 pb-9 pt-10 transition-all duration-500 hover:-translate-y-1.5 hover:border-line-gold hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,.7)]">
+                <article className="group h-full rounded-lg border border-line bg-gradient-to-b from-panel to-panel/50 px-8 pb-9 pt-10 text-center transition-all duration-500 hover:-translate-y-1.5 hover:border-line-gold hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,.7)]">
                   <span className="mb-[18px] block font-serif text-[1.6rem] font-medium text-gold-2">
                     0{i + 1}
                   </span>
                   <h3 className="m-0 mb-3 font-serif text-[1.4rem] font-semibold leading-[1.2] text-head">
                     {e.title}
                   </h3>
-                  <p className="m-0 text-[0.96rem] text-body/90">{e.line}</p>
+                  <p className="m-0 font-serif text-[0.96rem] text-body/90">{e.line}</p>
                 </article>
               </Reveal>
             ))}
