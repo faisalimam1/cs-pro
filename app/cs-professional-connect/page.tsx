@@ -106,7 +106,7 @@ export default function CsProfessionalConnect() {
                   <h3 className="m-0 mb-3 font-serif text-[1.4rem] font-semibold leading-[1.2] text-head">
                     {e.title}
                   </h3>
-                  <p className="m-0 font-serif text-[0.96rem] text-body/90">{e.line}</p>
+                  <p className="m-0 font-serif text-[1.15rem] leading-[1.6] text-body/90">{e.line}</p>
                 </article>
               </Reveal>
             ))}

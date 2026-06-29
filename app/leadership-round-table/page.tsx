@@ -35,17 +35,17 @@ const ROUND_TABLES = [
   {
     no: "I",
     title: "Driving Organisational Transformation",
-    line: "Actions taken, changes implemented and outcomes achieved — real-world case studies that inspire transformation across sectors.",
+    line: "Explore how organisations have driven transformation through decisive actions, implemented strategic changes, and achieved measurable outcomes, with leaders sharing practical experiences, lessons learned, and real-world case studies.",
   },
   {
     no: "II",
     title: "Building the AI-Ready Workforce",
-    line: "How startups, industry and academia partner together — internships, curriculum, hiring and experiential learning for the AI era.",
+    line: "Discuss how startups, industry, and academia can work together to build an AI-ready workforce through stronger partnerships, internships, experiential learning, curriculum modernisation, and future-focused hiring practices.",
   },
   {
     no: "III",
     title: "Beyond the Machine",
-    line: "Human-centred, ethical and purpose-driven innovation — ensuring technology serves humanity as AI grows more capable.",
+    line: "Examine how organisations can foster human-centred, ethical, and purpose-driven innovation by building trust, strengthening leadership, and ensuring technological progress remains aligned with human values.",
   },
 ];
 
@@ -70,9 +70,10 @@ export default function LeadershipRoundTable() {
         <Wrap narrow className="text-center">
           <Reveal>
             <p className="font-serif text-[clamp(1.4rem,2.6vw,1.95rem)] leading-[1.5] text-head">
-              It is our privilege to invite you to lead the conversation — a half-morning
-              of focused round tables, generating practical insight and lasting
-              collaboration among the people shaping the future workforce.
+              It is our privilege to invite you to lead the conversation at an
+              exclusive half-day Leadership Round Table. Join fellow leaders in
+              exchanging practical insights, exploring shared challenges, and
+              fostering collaborations that will help shape the future.
             </p>
           </Reveal>
           <Reveal>
@@ -98,26 +99,26 @@ export default function LeadershipRoundTable() {
         <Wrap>
           <SectionHeading
             kicker="The Round Tables"
-            title="Three conversations that matter"
-            sub="10:00 – 10:45 AM · three parallel tables · leaders only"
+            title="Three Conversations That Matter"
+            sub="09:45 AM – 10:45 AM | Three Parallel Round Table Discussions"
           />
           <div className="mt-14 grid grid-cols-1 gap-[26px] md:grid-cols-3">
             {ROUND_TABLES.map((rt, i) => (
               <Reveal key={rt.no} delay={i * 120}>
-                <article className="group relative h-full overflow-hidden rounded-lg border border-line bg-gradient-to-b from-panel to-panel/50 px-8 pb-9 pt-10 transition-all duration-500 hover:-translate-y-1.5 hover:border-line-gold hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,.7)]">
+                <article className="group relative h-full overflow-hidden rounded-lg border border-line bg-gradient-to-b from-panel to-panel/50 px-8 pb-9 pt-10 text-center transition-all duration-500 hover:-translate-y-1.5 hover:border-line-gold hover:shadow-[0_30px_60px_-30px_rgba(0,0,0,.7)]">
                   <span className="mb-[18px] block font-serif text-[2.4rem] font-medium italic leading-none text-gold-2/90">
                     {rt.no}
                   </span>
                   <h3 className="m-0 mb-3 font-serif text-[1.4rem] font-semibold leading-[1.2] text-head">
                     {rt.title}
                   </h3>
-                  <p className="m-0 text-[0.96rem] text-body/90">{rt.line}</p>
+                  <p className="m-0 font-serif text-[1.15rem] leading-[1.6] text-body/90">{rt.line}</p>
                 </article>
               </Reveal>
             ))}
           </div>
           <Reveal>
-            <p className="mx-auto mt-10 max-w-[620px] text-center text-[0.9rem] text-muted">
+            <p className="mx-auto mt-10 max-w-[620px] text-center text-[1.15rem] text-muted">
               Detailed discussion themes and table allocations are shared with confirmed
               participants ahead of the event.
             </p>
