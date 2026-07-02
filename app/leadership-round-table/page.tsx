@@ -24,11 +24,11 @@ const AGENDA: [string, string][] = [
   ["9:00 AM", "Arrival, registration, IEEE Membership Desk & refreshments"],
   ["9:30 AM", "Inaugural Session — welcome address & round-table briefing"],
   ["10:00 AM", "Three parallel Leadership Round Tables"],
-  ["10:45 AM", "Rapid Fire Leadership Exchange"],
-  ["11:05 AM", "Leadership Insights Presentation"],
-  ["11:20 AM", "Moderator summary & group photograph"],
-  ["11:30 AM", "Tea break & Professionals Connect"],
-  ["1:00 PM", "Lunch & networking"],
+  ["10:45 AM", "Moderator summary & group photograph"],
+  ["10:55 AM", "Rapid Fire Leadership Exchange"],
+  ["11:15 AM", "Leadership Insights Presentation"],
+  ["11:30 AM", "Tea Break & Professional Connect Networking"],
+  ["1:00 PM", "Lunch"],
 ];
 
 const ROUND_TABLES = [
@@ -60,9 +60,8 @@ export default function LeadershipRoundTable() {
   return (
     <main>
       <TrackHero
-        eyebrow="Leaders"
         title="Leadership Round Table"
-        intro="A closed, peer-level forum for the decision-makers who drive industry, academia, business and startups forward, convened for focused round-table dialogue and not scripted panels."
+        intro="A closed forum for the decision-makers who drive industry, academia, business and startups forward, convened for focused round-table dialogue and not scripted panels."
       />
 
       {/* Invitation statement */}
@@ -88,7 +87,6 @@ export default function LeadershipRoundTable() {
           <SectionHeading
             kicker="The Programme"
             title="The morning at a glance"
-            sub="9:00 AM – 1:00 PM · sequence indicative"
           />
           <Agenda items={AGENDA} />
         </Wrap>
@@ -100,7 +98,7 @@ export default function LeadershipRoundTable() {
           <SectionHeading
             kicker="The Round Tables"
             title="Three Conversations That Matter"
-            sub="09:45 AM – 10:45 AM | Three Parallel Round Table Discussions"
+            sub="10:00 AM – 10:45 AM | Three Parallel Round Table Discussions"
           />
           <div className="mt-14 grid grid-cols-1 gap-[26px] md:grid-cols-3">
             {ROUND_TABLES.map((rt, i) => (

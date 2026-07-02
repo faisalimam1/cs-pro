@@ -15,50 +15,50 @@ export const metadata: Metadata = {
     url: ROUTES.professionals,
     title: "CS Professional Connect · IEEE CS Pro 2026",
     description:
-      "A curated networking forum designed to foster meaningful conversations, cross-sector collaboration, and lasting professional connections. By invitation only.",
+      "A curated networking forum designed to foster meaningful conversations, collaboration, and lasting professional connections. By invitation only.",
     images: [{ url: "/assets/og/og-image.png", width: 1200, height: 630 }],
   },
 };
 
 const AGENDA: [string, string][] = [
-  ["11:30 AM", "Opening Address — “Navigating a Changing World Together”"],
-  ["12:00 PM", "Ice breakers & introductions"],
-  ["12:20 PM", "Meet & Greet session with Industry Leaders"],
-  ["12:50 PM", "Closing remarks & acknowledgements"],
+  ["11:00 AM", "Arrival, registration & IEEE Membership Desk"],
+  ["11:30 AM", "ExeCom Address — “Navigating a Changing World Together”"],
+  ["12:00 PM", "Ice breakers"],
+  ["12:20 PM", "Closing remarks & acknowledgements"],
+  ["12:30 PM", "Meet & Greet session with Industry Leaders"],
   ["1:00 PM", "Lunch & networking"],
 ];
 
 const EXPECT = [
   {
-    title: "Cross-Sector Networking",
-    line: "Engage with HR leaders, Training & Placement Officers, academicians, industry professionals, and the IEEE community in curated networking conversations designed to foster meaningful relationships, knowledge exchange, and future collaborations.",
+    title: "ExeCom Address",
+    line: "Begin the forum with an engaging address on “Navigating a Changing World Together”, exploring the impact of emerging technologies, workforce transformation and responsible innovation.",
+  },
+  {
+    title: "Professional Networking",
+    line: "Connect with a diverse community of industry leaders, professionals, academicians, and IEEE Computer Society Bangalore Chapter members to build meaningful relationships, exchange insights, and explore new opportunities for collaboration.",
   },
   {
     title: "IEEE Membership & Professional Community",
     line: "Discover how IEEE membership supports professional growth, lifelong learning, and global networking. Dedicated support will be available for membership enquiries and on-the-spot registration.",
   },
-  {
-    title: "Opening Keynote Address",
-    line: "Begin the forum with an engaging address on “Navigating a Changing World Together”, exploring the impact of emerging technologies, workforce transformation and responsible innovation.",
-  },
 ];
 
 const ROOM: [string, string][] = [
-  ["hr", "HR Professionals"],
-  ["tpo", "TPOs"],
+  ["leader", "Industry Leaders"],
+  ["hr", "Industry Professionals"],
   ["academia", "Academicians"],
-  ["leader", "Industry Professionals"],
-  ["innovator", "IEEE Excom"],
-  ["founder", "Founders"],
+  ["founder", "Startups"],
+  ["innovator", "IEEE ExeCom"],
+  ["investor", "Investors"],
 ];
 
 export default function CsProfessionalConnect() {
   return (
     <main>
       <TrackHero
-        eyebrow="Professionals"
         title="CS Professional Connect"
-        intro="A curated networking forum designed to foster meaningful conversations, cross-sector collaboration, and lasting professional connections."
+        intro="A curated networking forum designed to foster meaningful conversations, collaboration, and lasting professional connections."
         timeLabel="11:00 AM – 1:00 PM"
       />
 
@@ -67,11 +67,11 @@ export default function CsProfessionalConnect() {
         <Wrap narrow className="text-center">
           <Reveal>
             <p className="font-serif text-[clamp(1.4rem,2.6vw,1.95rem)] leading-[1.5] text-head">
-              You are warmly invited to IEEE CS Professional Connect, an
+              You are warmly invited to CS Professional Connect, an
               invitation-only networking forum designed to bring together
               professionals, industry representatives, academicians, and the IEEE
-              community to connect, exchange insights, and cultivate lasting
-              collaborations.
+              Computer Society Bangalore Chapter community to build long lasting
+              connections.
             </p>
           </Reveal>
           <Reveal>
@@ -86,7 +86,6 @@ export default function CsProfessionalConnect() {
           <SectionHeading
             kicker="The Programme"
             title="The session at a glance"
-            sub="Session · 11:30 AM – 1:00 PM · sequence indicative"
           />
           <Agenda items={AGENDA} />
         </Wrap>

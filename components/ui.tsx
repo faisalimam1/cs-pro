@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { EVENT } from "@/lib/event";
 
 /* ---------- Button / link-button ---------- */
 type BtnProps = {
@@ -138,6 +139,40 @@ export function MapPinLink({ href, className = "" }: { href: string; className?:
       </svg>
       View Map
     </a>
+  );
+}
+
+/* ---------- Brand identifier + tagline (hero) ---------- */
+export function BrandTagline({ className = "" }: { className?: string }) {
+  return (
+    <p className={`text-[0.78rem] font-medium uppercase tracking-[0.26em] text-muted ${className}`}>
+      <span className="block text-[1.05rem] font-semibold tracking-[0.32em] text-gold-2 [text-shadow:0_2px_24px_rgba(226,197,126,.4)]">
+        IEEE&nbsp;CSBC-&nbsp;CS&nbsp;PRO&nbsp;2026
+      </span>
+      <span className="mt-1 block">{EVENT.theme}</span>
+    </p>
+  );
+}
+
+/* ---------- Hero event meta (prominent date · time · venue chip) ---------- */
+export function EventMeta({
+  timeLabel = EVENT.timeLabel,
+  className = "",
+}: {
+  timeLabel?: string;
+  className?: string;
+}) {
+  return (
+    <div className={`flex flex-wrap items-center justify-center gap-x-3 gap-y-2 ${className}`}>
+      <span className="inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-1 rounded-full border border-line-gold bg-gold/[0.06] px-6 py-3 text-[1rem] font-medium tracking-[0.03em] text-head shadow-[0_12px_34px_-18px_rgba(0,0,0,.75)]">
+        <span>{EVENT.dateLabel}</span>
+        <span aria-hidden="true" className="text-gold-2">·</span>
+        <span>{timeLabel}</span>
+        <span aria-hidden="true" className="text-gold-2">·</span>
+        <span>{EVENT.venue}</span>
+      </span>
+      <MapPinLink href={EVENT.venueMapUrl} className="ml-0 translate-y-0" />
+    </div>
   );
 }
 

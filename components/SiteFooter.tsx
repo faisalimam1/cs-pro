@@ -7,8 +7,8 @@ export default function SiteFooter() {
       <div className="mx-auto grid w-full max-w-[1140px] grid-cols-1 items-start gap-10 md:grid-cols-[1.6fr_1fr]">
         <div>
           <img
-            src="/assets/logos/ieee-master.svg"
-            alt="IEEE"
+            src="/assets/logos/ieeebs.png"
+            alt="IEEE Bangalore Section"
             className="mb-[18px] h-[38px] w-auto opacity-90 [filter:brightness(0)_invert(1)]"
           />
           <p className="m-0 mb-1 text-[0.95rem] text-strong">{EVENT.organiser}</p>

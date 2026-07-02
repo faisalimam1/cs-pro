@@ -24,8 +24,7 @@ export const EVENT = {
   contactEmail: 'ieeecspro@gmail.com',
 
   organiser: 'IEEE Computer Society · Bangalore Chapter',
-  association:
-    'In association with IEEE Bangalore Section & IEEE Sensor Council',
+  association: 'In association with IEEE Sensors Council',
   afterNote: 'Followed by lunch & networking.',
 
   forms: {

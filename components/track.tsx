@@ -1,18 +1,17 @@
 import Constellation from "@/components/Constellation";
 import Countdown from "@/components/Countdown";
+import OrganizerLogos, { LOGO } from "@/components/OrganizerLogos";
 import Reveal from "@/components/Reveal";
 import AddToCalendar from "@/components/AddToCalendar";
-import { Badge, Button, MapPinLink, Wrap } from "@/components/ui";
+import { Badge, BrandTagline, Button, EventMeta, MapPinLink, Wrap } from "@/components/ui";
 import { EVENT, type CalEvent } from "@/lib/event";
 
 /* ---------- Track hero ---------- */
 export function TrackHero({
-  eyebrow,
   title,
   intro,
   timeLabel = EVENT.timeLabel,
 }: {
-  eyebrow: string;
   title: string;
   intro: string;
   timeLabel?: string;
@@ -29,14 +28,16 @@ export function TrackHero({
       />
 
       <div className="relative z-[2] mx-auto w-full max-w-[900px]">
-        <Reveal delay={120} className="mt-8">
+        <Reveal>
+          <OrganizerLogos logos={[LOGO.bangaloreSection, LOGO.cs80]} size="lg" />
+        </Reveal>
+
+        <Reveal delay={120} className="mt-12">
           <Badge>{EVENT.access}</Badge>
         </Reveal>
 
         <Reveal delay={200}>
-          <p className="mb-5 mt-7 text-[0.78rem] font-medium uppercase tracking-[0.26em] text-muted">
-            {eyebrow}
-          </p>
+          <BrandTagline className="mb-5 mt-7" />
         </Reveal>
 
         <Reveal delay={300}>
@@ -52,10 +53,7 @@ export function TrackHero({
         </Reveal>
 
         <Reveal delay={480}>
-          <p className="mt-7 text-[0.92rem] tracking-[0.06em] text-strong">
-            {EVENT.dateLabel} &nbsp;·&nbsp; {timeLabel} &nbsp;·&nbsp; {EVENT.venue}
-            <MapPinLink href={EVENT.venueMapUrl} />
-          </p>
+          <EventMeta timeLabel={timeLabel} className="mt-7" />
         </Reveal>
 
         <Reveal delay={560} className="mt-12">
@@ -125,14 +123,16 @@ export function RegisterSection({
               ["Time", timeLabel],
               ["Venue", EVENT.venue],
             ].map(([lbl, val]) => (
-              <div key={lbl} className="flex flex-col gap-2.5">
+              <div key={lbl} className="flex flex-col items-center gap-2.5 text-center">
                 <span className="text-[0.66rem] uppercase tracking-[0.28em] text-gold-2">
                   {lbl}
                 </span>
                 <span className="font-serif text-[1.5rem] font-medium text-head">
                   {val}
-                  {lbl === "Venue" && <MapPinLink href={EVENT.venueMapUrl} />}
                 </span>
+                {lbl === "Venue" && (
+                  <MapPinLink href={EVENT.venueMapUrl} className="ml-0 translate-y-0" />
+                )}
               </div>
             ))}
           </div>
